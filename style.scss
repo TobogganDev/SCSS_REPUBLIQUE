@@ -1,5 +1,136 @@
+@use "mixins";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+}
+
+header{
+  @include mixins.flex(center,center);
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  video{
+    position: absolute;
+    z-index: -100;
+    
+  }
+
+  .container-header{
+    padding: 51px;
+    border: 1px solid #ffd166;
+    @include mixins.flex(center,center);
+    flex-direction: column;
+
+    .link-title{
+      font-size: 5rem;
+      color: #ffd166;
+    }
+
+    .link-galery{
+      color: #ef476f;
+      font-weight: 500;
+      font-size: 20px;
+      margin-top: 20px;
+      transition: 0.4s ease-in-out;
+
+      &:hover{
+        font-size: 25px;
+      }
+    }
+  }
+
+  .pres-button{
+    padding: 15px;
+    margin-top: 50px;
+    border-radius: 20px;
+    color: white;
+    background-color: #ffd166;
+    animation: bounce 1.5s ease infinite;
+  }
+
+  @keyframes bounce {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-15px);}
+    100% {transform: translateY(0);}
+  }
+
+}
+
+.pres{
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+
+  p{
+    font-size: 1.7rem;
+  }
+
+  .contain-img{
+    display: flex;
+    margin: 20px 0;
+  }
+
+  .statue{
+    max-height: 500px;
+    border: 2px solid #ffd166;
+  }
+
+  ul{
+    display: flex;
+    list-style: none;
+
+    .metro{
+      padding: 5px;
+
+      img{
+        width: 24px;
+        height: 24px;
+      }
+    }
+    
+  }
+}
+
+footer{
+  @include mixins.flex(center,center);
+  background-color: #000000;
+  flex-direction: column;
+  padding: 50px;
+
+  a i{
+    color: #ffd166;
+    font-size: 30px;
+  }
+  p{
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: white;
+
+    a i{
+      color: white;
+      font-size: 16px;
+    }
+  }
 }
