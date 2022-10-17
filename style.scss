@@ -29,37 +29,37 @@ header{
   height: 100vh;
   overflow: hidden;
   position: relative;
-
+  
   video{
     position: absolute;
     z-index: -100;
     
   }
-
+  
   .container-header{
     padding: 51px;
     border: 1px solid #ffd166;
     @include mixins.flex(center,center);
     flex-direction: column;
-
+    
     .link-title{
       font-size: 5rem;
       color: #ffd166;
     }
-
+    
     .link-galery{
-      color: #ef476f;
+      color: #ffd166;
       font-weight: 500;
       font-size: 20px;
       margin-top: 20px;
       transition: 0.4s ease-in-out;
-
+      
       &:hover{
         font-size: 25px;
       }
     }
   }
-
+  
   .pres-button{
     padding: 15px;
     margin-top: 50px;
@@ -68,13 +68,13 @@ header{
     background-color: #ffd166;
     animation: bounce 1.5s ease infinite;
   }
-
+  
   @keyframes bounce {
     0% {transform: translateY(0);}
     50% {transform: translateY(-15px);}
     100% {transform: translateY(0);}
   }
-
+  
 }
 
 .pres{
@@ -82,28 +82,28 @@ header{
   margin: 50px auto;
   display: flex;
   flex-direction: column;
-
+  
   p{
     font-size: 1.7rem;
   }
-
+  
   .contain-img{
     display: flex;
     margin: 20px 0;
   }
-
+  
   .statue{
     max-height: 500px;
-    border: 2px solid #ffd166;
+    border: 3px solid #ffd166;
   }
-
+  
   ul{
     display: flex;
     list-style: none;
-
+    
     .metro{
       padding: 5px;
-
+      
       img{
         width: 24px;
         height: 24px;
@@ -118,7 +118,7 @@ footer{
   background-color: #000000;
   flex-direction: column;
   padding: 50px;
-
+  
   a i{
     color: #ffd166;
     font-size: 30px;
@@ -127,10 +127,47 @@ footer{
     margin-top: 15px;
     text-transform: uppercase;
     color: white;
-
+    
     a i{
       color: white;
       font-size: 16px;
     }
+  }
+}
+
+
+.container-top{
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  padding: 40px;
+  
+  h1{
+    margin: auto;
+    font-size: 5rem;
+  }
+  
+  a{
+    color: #ffd166;
+    font-size: 20px;
+    transition: 0.4s ease-in-out;
+    
+    &:hover{
+      font-size: 25px;
+    }
+  }
+}
+
+.container-grid{
+  width: 80%;
+  margin: auto;
+  @include mixins.grid(repeat(4,1fr),repeat(25,20vh),20px);
+  
+  img{
+    max-height: 100%;
+  }
+  .img1 {
+    grid-column: 1;
+    grid-row: 1/3;
   }
 }
