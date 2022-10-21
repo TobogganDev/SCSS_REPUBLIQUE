@@ -1,11 +1,16 @@
+@use "../Utils/variables" as *;
+@use "../Utils/mixins" as *;
+
+
+
 footer{
-  @include mixins.flex(center,center);
+  @include flex(center,center);
   background-color: #000000;
   flex-direction: column;
   padding: 50px;
   
   a i{
-    color: #ffd166;
+    color: $yellow;
     font-size: 30px;
     transition: 0.4s ease-in-out;
 

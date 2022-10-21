@@ -1,7 +1,9 @@
 @use "../Utils/mixins" as *;
+@use "../Utils/variables" as *;
+
 
 header{
-  @include mixins.flex(center,center);
+  @include flex(center,center);
   flex-direction: column;
   width: 100%;
   height: 100vh;
@@ -17,17 +19,17 @@ header{
   .container-header{
     padding: 51px;
     border: 1px solid $yellow;
-    @include mixins.flex(center,center);
+    @include flex(center,center);
     flex-direction: column;
     
     .link-title{
       font-size: 5rem;
-      color: #ffd166;
+      color: $yellow;
       text-align: center;
     }
     
     .link-galery{
-      color: #ffd166;
+      color: $yellow;
       font-weight: 500;
       font-size: 20px;
       margin-top: 20px;
@@ -57,7 +59,7 @@ header{
   
   .statue{
     max-height: 500px;
-    border: 3px solid #ffd166;
+    border: 3px solid $yellow;
   }
   
   ul{
