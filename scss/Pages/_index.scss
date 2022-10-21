@@ -1,0 +1,77 @@
+@use "../Utils/mixins" as *;
+
+header{
+  @include mixins.flex(center,center);
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  
+  video{
+    position: absolute;
+    z-index: -100;
+    
+  }
+  
+  .container-header{
+    padding: 51px;
+    border: 1px solid $yellow;
+    @include mixins.flex(center,center);
+    flex-direction: column;
+    
+    .link-title{
+      font-size: 5rem;
+      color: #ffd166;
+      text-align: center;
+    }
+    
+    .link-galery{
+      color: #ffd166;
+      font-weight: 500;
+      font-size: 20px;
+      margin-top: 20px;
+      transition: 0.4s ease-in-out;
+      
+      &:hover{
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.pres{
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  
+  p{
+    font-size: 1.7rem;
+  }
+  
+  .contain-img{
+    display: flex;
+    margin: 20px 0;
+  }
+  
+  .statue{
+    max-height: 500px;
+    border: 3px solid #ffd166;
+  }
+  
+  ul{
+    display: flex;
+    list-style: none;
+    
+    .metro{
+      padding: 5px;
+      
+      img{
+        width: 24px;
+        height: 24px;
+      }
+    }
+    
+  }
+}
